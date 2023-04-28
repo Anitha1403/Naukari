@@ -1,0 +1,13 @@
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\bin\Debug\CandidatePortal.exe.config
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\bin\Debug\CandidatePortal.exe
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\bin\Debug\CandidatePortal.pdb
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\bin\Debug\Candidate.BusinessLogic.dll
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\bin\Debug\Candidate.dll
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\bin\Debug\Candidate.BusinessLogic.pdb
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\bin\Debug\Candidate.pdb
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\obj\Debug\CandidatePortal.csproj.SuggestedBindingRedirects.cache
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\obj\Debug\CandidatePortal.csproj.CoreCompileInputs.cache
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\obj\Debug\CandidatePortal.csproj.CopyComplete
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\obj\Debug\CandidatePortal.exe
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\obj\Debug\CandidatePortal.pdb
+D:\Real time Projects\NaukariPortal\Candidate\CandidatePortal\obj\Debug\CandidatePortal.csproj.AssemblyReference.cache

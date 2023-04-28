@@ -1,0 +1,8 @@
+D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\bin\Debug\Candidate.BusinessLogic.dll
+D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\bin\Debug\Candidate.BusinessLogic.pdb
+D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\bin\Debug\Candidate.dll
+D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\bin\Debug\Candidate.pdb
+D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\obj\Debug\Candidate.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\obj\Debug\Candidate.BusinessLogic.csproj.CopyComplete
+D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\obj\Debug\Candidate.BusinessLogic.dll
+D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\obj\Debug\Candidate.BusinessLogic.pdb

@@ -1,0 +1,5 @@
+D:\Real time Projects\NaukariPortal\Candidate\Candidate\bin\Debug\Candidate.dll
+D:\Real time Projects\NaukariPortal\Candidate\Candidate\bin\Debug\Candidate.pdb
+D:\Real time Projects\NaukariPortal\Candidate\Candidate\obj\Debug\Candidate.csproj.CoreCompileInputs.cache
+D:\Real time Projects\NaukariPortal\Candidate\Candidate\obj\Debug\Candidate.dll
+D:\Real time Projects\NaukariPortal\Candidate\Candidate\obj\Debug\Candidate.pdb

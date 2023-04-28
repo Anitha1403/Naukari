@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Candidate
+{
+    /// <summary>
+    /// Class that holds Candidate Accomplishments Details
+    /// </summary>
+    public class Accomplishments
+    {
+        public OnlineProfileDetails OnlineProfileDetails { get; set; }
+        public WorkSampleDetails WorkSampleDetails { get; set; }
+        public ResearchPublicationDetails ResearchPublicationDetails { get; set; }
+        public PresentationDetails PresentationDetails { get; set; }
+        public PatentDetails PatentDetails { get; set; }
+        public CertificationDetails CertificationDetails { get; set; }
+    }
+}
