@@ -118,7 +118,7 @@ namespace Candidate.BusinessLogic.Enums
     //Current Industry
     enum CurrentIndustry
     {
-        HardwareAndNeworking1,
+        HardwareAndNeworking1=1,
         ECommerce,
         Banking,
         Insurance,

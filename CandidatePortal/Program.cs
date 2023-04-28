@@ -64,7 +64,7 @@ namespace CandidatePortal
                 ////Printing Candidate Profile summary details
                 //profileDetailsService.PrintProfileDetails(profileDetails);
                 ////Printing Candidate Project details
-               // projectDetailsService.PrintProjectDetails(projectDetails);
+               //projectDetailsService.PrintProjectDetails(projectDetails);
                 ////Printing Candidate Career Profile details
                 careerProfileService.PrintCareerProfileDetails(careerProfile);
                 

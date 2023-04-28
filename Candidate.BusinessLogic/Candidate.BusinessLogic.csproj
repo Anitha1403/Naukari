@@ -69,6 +69,7 @@
     <Compile Include="ProjectDetailsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResearchPublicationDetailsService.cs" />
+    <Compile Include="Utility\IntegerExceptionUtility.cs" />
     <Compile Include="Utility\Utility.cs" />
     <Compile Include="WorkSampleDetailsService.cs" />
   </ItemGroup>

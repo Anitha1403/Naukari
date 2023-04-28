@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
@@ -15,6 +16,8 @@ namespace Candidate.BusinessLogic
         {
             CareerProfile careerProfile = new CareerProfile();
             StringBuilder validations = new StringBuilder();
+            Regex rgx = new Regex(@"^[A-Za-z]+\d+.*$");
+
             try
             {
                 //Current Industry   
@@ -226,9 +229,9 @@ namespace Candidate.BusinessLogic
                 //Preffered Location
                 Console.WriteLine("\nDifferent values for Preffered Location:");
                 List<string> prefferedLocationList = new List<string>();
-                prefferedLocationList.Add(Constants.Constants.DAY);
-                prefferedLocationList.Add(Constants.Constants.NIGHT);
-                prefferedLocationList.Add(Constants.Constants.FLEXIBLE);
+                prefferedLocationList.Add(Constants.Constants.BANGALORE);
+                prefferedLocationList.Add(Constants.Constants.HYDERABAD);
+                prefferedLocationList.Add(Constants.Constants.CHENNAI);
 
                 Utility.Utility.PrintListValues(prefferedLocationList);
 
@@ -261,20 +264,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("Please select integer value for Preffered Location(Ex.1 for Bangaore)\n");
                 }
 
-                //Expected salary               
-                Console.Write("Enter Expected salary:");
-                if (!string.IsNullOrEmpty(Console.ReadLine()))
-                {
-                    double expectedSalary = Convert.ToDouble(Console.ReadLine());
-                    if (expectedSalary > 0)
-                        careerProfile.ExpectedSalary = expectedSalary;
-                    else
-                        validations.Append("Please provide a decimal/integer value for  Expected Salary is missing(ex:4216.34).\n");
-                }
-                else
-                {
-                    validations.Append("Expected Salary is missing.\n");
-                }
+                
 
                 //Job Role  
                 Console.WriteLine("\nDifferent values for Job role:");
@@ -326,6 +316,30 @@ namespace Candidate.BusinessLogic
                     validations.Append("Please select integer value for Job role (Ex.1 for Testing)\n");
                 }
 
+                //Expected salary               
+                Console.Write("Enter Expected salary:");
+                string salary = Console.ReadLine();
+                if (!string.IsNullOrEmpty(salary))
+                {
+                    if (rgx.IsMatch(salary))
+                    {
+                        string sal = salary; 
+                    }
+                    else if (Regex.IsMatch(salary, @"^-?\d+(?:\.\d+)?$")) 
+                    {
+                        double expectedSalary = double.Parse(salary);
+                        careerProfile.ExpectedSalary = expectedSalary;
+                    }
+                    else
+                    {
+                        validations.Append("Please provide a decimal/integer value for  Expected Salary (ex:4216.34).\n");
+                    }
+                }
+                else
+                {
+                    validations.Append("Expected Salary is missing.\n");
+                }            
+
                 //Error validations
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
@@ -354,8 +368,8 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine("Employment type:{0}",details.DesiredEmploymentType);
                 Console.WriteLine("Preffered shift:{0}",details.PreferredShift);
                 Console.WriteLine("Preffered work location:{0}",details.PreferredWorklocation);
+                Console.WriteLine("Job role:{0}", details.JobRole);
                 Console.WriteLine("Expected salary:{0}",details.ExpectedSalary);
-                Console.WriteLine("Job role:{0}",details.JobRole);
                
 
             }

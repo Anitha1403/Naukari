@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
@@ -14,6 +15,8 @@ namespace Candidate.BusinessLogic
         {
             ProjectDetails projectDetails = new ProjectDetails();
             StringBuilder validations = new StringBuilder();
+            Regex rgx = new Regex(@"^[A-Za-z]+\d+.*$");
+
             try
             {
                 Console.WriteLine();
@@ -210,32 +213,31 @@ namespace Candidate.BusinessLogic
                 }
                 else
                 {
-                    validations.Append("Please select integer value for Employment nature (Ex.1 for ful time)\n");
+                    validations.Append("Please select integer value for Employment nature (Ex.1 for full time)\n");
                 }
 
                 //team size
                 Console.Write("Enter Team Size:");
-                string size = Console.ReadLine();
-                if (!string.IsNullOrEmpty(size))
+                string strTeamSize = Console.ReadLine();
+                if (!string.IsNullOrEmpty(strTeamSize))
                 {
-                    int teamSizeOutput = 0;
-                    bool isTeamSizeHasValue = int.TryParse(Console.ReadLine(), out teamSizeOutput);
-                    int sizeValue = 0;
-                    if (isTeamSizeHasValue==true)
-                    {    
-                        sizeValue = teamSizeOutput;
-                       
+                    if (rgx.IsMatch(strTeamSize))
+                    {
+                        string teamSizeValue = strTeamSize;
+                    }
+                    else if (Regex.IsMatch(strTeamSize, @"^\d+$"))
+                    {
+                        int teamSize = int.Parse(strTeamSize);
+                        projectDetails.TeamSize = teamSize;
                     }
                     else
                     {
-                        validations.Append("Please Enter integer value  for team size(ex.4)\n");
+                        validations.Append("Provide integer value(ex.3).\n");
                     }
-                    projectDetails.TeamSize = sizeValue;
-
                 }
                 else
                 {
-                    validations.Append("Project team size is missing.\n");
+                    validations.Append("Project team size value is missing.\n");
                 }
 
                 //Role
