@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic.Enums
 {
- 
-    //Personal Details
-    enum Gender
+    enum NoticePeriod
     {
-        Male = 1,
-        Female,
-        Transgender
-    } 
+        FifteenDaysOrLess = 1,
+        OneMonth,
+        TwoMonths,
+        ThreeMonths,
+        MoreThanThreeMonths
+    }
 }

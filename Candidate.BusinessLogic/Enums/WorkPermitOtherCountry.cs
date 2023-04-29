@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic.Enums
 {
- 
-    //Personal Details
-    enum Gender
+    enum WorkPermitOtherCountry
     {
-        Male = 1,
-        Female,
-        Transgender
-    } 
+        India = 1,
+        Australia,
+        NewZealand,
+        England,
+        Irland,
+        USA
+    }
 }

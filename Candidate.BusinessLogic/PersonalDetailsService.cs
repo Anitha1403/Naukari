@@ -233,28 +233,39 @@ namespace Candidate.BusinessLogic
 
                 //Candidate Differently abled
                 Console.Write("\nAre you differently abled?(Enter True/False):");                
-                string differentlyAbledValue =Console.ReadLine();  
-                if (differentlyAbledValue.ToLower() == "true" || differentlyAbledValue.ToLower() == "false")
-                {                    
-                    bool differentlyAbled = Convert.ToBoolean(differentlyAbledValue);                    
-                    personalDetails.DifferentlyAbled = differentlyAbled;
+                string differentlyAbledValue =Console.ReadLine();
+                if (!string.IsNullOrEmpty(differentlyAbledValue))
+                {
+                    if (differentlyAbledValue.ToLower() == "true" || differentlyAbledValue.ToLower() == "false")
+                    {
+                        bool differentlyAbled = Convert.ToBoolean(differentlyAbledValue);
+                        personalDetails.DifferentlyAbled = differentlyAbled;
+                    }
+                    else
+                        validations.Append("Provide a value for Differently abled(ex.true for differently abled).\n");
                 }
                 else
-                    validations.Append("Provide a value for Differently abled(ex.true for differently abled).\n");
+                    validations.Append("Differently abled value is missing.");
 
                 //Candidate Career Break
                 Console.Write("\nDo you have any Career Break?(Enter True/False):");
                 string careerBreakValue = Console.ReadLine();
-                if (careerBreakValue.ToLower() == "true" || careerBreakValue.ToLower() == "false")
-                {                    
-                    bool careerBreak = Convert.ToBoolean(careerBreakValue);                   
-                    personalDetails.CareerBreak = careerBreak;
+                if (!string.IsNullOrEmpty(careerBreakValue))
+                {
+                    if (careerBreakValue.ToLower() == "true" || careerBreakValue.ToLower() == "false")
+                    {
+                        bool careerBreak = Convert.ToBoolean(careerBreakValue);
+                        personalDetails.CareerBreak = careerBreak;
+                    }
+                    else
+                        validations.Append("Provide a value for CareerBreak(ex.true/false).\n");
                 }
                 else
-                    validations.Append("Provide a value for CareerBreak(ex.true/false).\n");
+                validations.Append("Career break value is missing.");
 
-                //Candidate WorkPermitUSA
-                Console.WriteLine("\nDifferent values for WorkPermitUSA:");
+
+            //Candidate WorkPermitUSA
+            Console.WriteLine("\nDifferent values for WorkPermitUSA:");
                 List<string> workPermitUSAList = new List<string>();
                 workPermitUSAList.Add(Constants.Constants.HAVE_US_H1_VISA);
                 workPermitUSAList.Add(Constants.Constants.NEED_US_H1_VISA);

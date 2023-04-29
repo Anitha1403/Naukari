@@ -13,6 +13,6 @@ namespace Candidate
     {
         public string SocialProfile { get; set; }
         public string SocialProfileURL { get; set; }
-        public string SocialProfileDescrition { get; set; }
+        public string SocialProfileDescription { get; set; }
     }
 }

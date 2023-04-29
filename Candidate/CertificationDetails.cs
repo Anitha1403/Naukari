@@ -17,6 +17,7 @@ namespace Candidate
         public string CertificationValidityFromYear { get; set; }
         public string CertificationValidityFromMonth { get; set; }
         public string CertificationValidityEndYear { get; set; }
-        public bool CertificationValidityEndMonth { get; set; }
+        public string CertificationValidityEndMonth { get; set; }
+        public bool CertificationExpires { get; set; }
     }
 }

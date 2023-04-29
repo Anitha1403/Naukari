@@ -21,32 +21,36 @@ namespace CandidatePortal
                 Console.WriteLine("\t\t\tCandidate Details:");
 
                 ////Reading Candidate Personal details                
-                //PersonalDetailsService personDetailsService  = new PersonalDetailsService();
+                //PersonalDetailsService personDetailsService = new PersonalDetailsService();
                 //PersonalDetails personalDetails = personDetailsService.ReadPersonalDetails();
 
                 ////Read Candidate Contact details
-                //ContactDetailsService contactDetailsService  = new ContactDetailsService();
+                //ContactDetailsService contactDetailsService = new ContactDetailsService();
                 //ContactDetails contactDetails = contactDetailsService.ReadContactDetails();
 
                 ////Read Candidate Document details
                 //DocumentDetailsService documentDetailsService = new DocumentDetailsService();
-                //DocumentDetails documentDetails  = documentDetailsService.ReadDocumentDetails();
+                //DocumentDetails documentDetails = documentDetailsService.ReadDocumentDetails();
 
                 ////Reading Candidate Address details
                 //AddressDetailsService addressDetailsService = new AddressDetailsService();
-                //AddressDetails addressDetalis  = addressDetailsService.ReadAddressDetails();
+                //AddressDetails addressDetalis = addressDetailsService.ReadAddressDetails();
 
                 ////Reading Candidate Profile summary details
                 //ProfileDetailsService profileDetailsService = new ProfileDetailsService();
-                //ProfileDetails profileDetails  = profileDetailsService.ReadProfileDetails();
+                //ProfileDetails profileDetails = profileDetailsService.ReadProfileDetails();
 
                 ////Reading Candidate Project details
                 //ProjectDetailsService projectDetailsService = new ProjectDetailsService();
-                //ProjectDetails projectDetails  = projectDetailsService.ReadProjectDetails();
+                //ProjectDetails projectDetails = projectDetailsService.ReadProjectDetails();
 
                 ////Reading Candidate Career profile
-                CareerProfileService careerProfileService = new CareerProfileService();
-                CareerProfile careerProfile  = careerProfileService.ReadCareerProfileDetails();
+                //CareerProfileService careerProfileService = new CareerProfileService();
+                //CareerProfile careerProfile  = careerProfileService.ReadCareerProfileDetails();
+
+                //Reading Accomplishments deatils
+                AccomplishmentsService accomplishmentsService = new AccomplishmentsService();
+                Accomplishments accomplishments = accomplishmentsService.ReadAccomplishments();
 
 
 
@@ -64,9 +68,12 @@ namespace CandidatePortal
                 ////Printing Candidate Profile summary details
                 //profileDetailsService.PrintProfileDetails(profileDetails);
                 ////Printing Candidate Project details
-               //projectDetailsService.PrintProjectDetails(projectDetails);
+                //projectDetailsService.PrintProjectDetails(projectDetails);
                 ////Printing Candidate Career Profile details
-                careerProfileService.PrintCareerProfileDetails(careerProfile);
+                //careerProfileService.PrintCareerProfileDetails(careerProfile);
+                //Printing Accomplishments Details
+                accomplishmentsService.PrintAccomplishments(accomplishments);
+
                 
 
 

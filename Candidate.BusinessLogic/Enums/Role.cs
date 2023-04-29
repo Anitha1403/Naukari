@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic.Enums
 {
- 
-    //Personal Details
-    enum Gender
+    enum Role
     {
-        Male = 1,
-        Female,
-        Transgender
-    } 
+        TestEngineer = 1,
+        QAArchitect,
+        TechLead,
+        ProjectManager,
+        Developer,
+        Support
+    }
 }

@@ -146,7 +146,26 @@ namespace Candidate.BusinessLogic.Constants
         public const string DEPLOYMENT = "Depolyment";
         public const string MARKETING = "Marketing";
 
+        //Accmplishments
+        //Online profiles
+        //social profile
+        public const string FACEBOOK = "Facebook";
+        public const string LINKED_IN = "Linkedin";
 
+        //PatentDetails
+        //PatentIssue
+        public const string PATENT_ISUUED = "Issued";
+        public const string PATENT_PENDING = "Pending";
+
+        //Work sample details
+        //Currently working
+        public const string CURRENTLY_WORKING = "Yes";
+        public const string CURRENTLY_NOT_WORKING = "No";
+
+        //Certification details
+        //Certification expires 
+        public const string CERTIFICATION_EXPIRES = "Yes";
+        public const string CERTIFICATION_NOT_EXPIRES = "No";
 
     }
 }

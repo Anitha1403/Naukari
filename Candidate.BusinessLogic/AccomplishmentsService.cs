@@ -6,7 +6,79 @@ using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
-    internal class AccomplishmentsService
+    public class AccomplishmentsService
     {
+        public Accomplishments ReadAccomplishments()
+        {
+            Accomplishments accomplishments = new Accomplishments();
+            try
+            {
+
+                OnlineProfileDetailsService onlineProfileDetailsService = new OnlineProfileDetailsService();
+                accomplishments.OnlineProfileDetails = onlineProfileDetailsService.ReadOnlineProfileDetails();
+
+                WorkSampleDetailsService workSampleDetailsService = new WorkSampleDetailsService();
+                accomplishments.WorkSampleDetails = workSampleDetailsService.ReadWorkSampleDetails();
+
+                ResearchPublicationDetailsService researchPublicationDetailsService =
+                    new ResearchPublicationDetailsService();
+                accomplishments.ResearchPublicationDetails = researchPublicationDetailsService.ReadResearchPublicationDetails();
+
+                PresentationDetailsService presentationDetailsService = new PresentationDetailsService();
+                accomplishments.PresentationDetails = presentationDetailsService.ReadPresentationDetails();
+
+                PatentDetailsService patentDetailsService = new PatentDetailsService();
+                accomplishments.PatentDetails = patentDetailsService.ReadPatentDetails();
+
+                CertificationDetailsService certificationDetailsService = new CertificationDetailsService();
+                accomplishments.CertificationDetails = certificationDetailsService.ReadCertificationDetails();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception messages:{ex.Message}");
+                Console.WriteLine();
+                Console.WriteLine($"Exception StackTrace:{ex.StackTrace}");
+            }
+            return accomplishments;
+
+        }
+        public void PrintAccomplishments(Accomplishments details)
+        {
+            try 
+            {
+                OnlineProfileDetailsService onlineProfileDetailsService = new OnlineProfileDetailsService();
+                onlineProfileDetailsService.PrintOnlineProfileDetails(details.OnlineProfileDetails);
+
+                WorkSampleDetailsService workSampleDetailsService = new WorkSampleDetailsService();
+                workSampleDetailsService.PrintWorkSampleDetails(details.WorkSampleDetails);
+
+                ResearchPublicationDetailsService researchPublicationDetailsService =
+                    new ResearchPublicationDetailsService();
+                researchPublicationDetailsService.PrintResearchPublicationDetails(details.ResearchPublicationDetails);
+
+                PresentationDetailsService presentationDetailsService = new PresentationDetailsService();
+                presentationDetailsService.PrintPresentationDetails(details.PresentationDetails);
+
+                PatentDetailsService patentDetailsService = new PatentDetailsService();
+                patentDetailsService.PrintPatentDetails(details.PatentDetails);
+
+                CertificationDetailsService certificationDetailsService = new CertificationDetailsService();
+                certificationDetailsService.PrintCerificationDetails(details.CertificationDetails);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception messages:{ex.Message}");
+                Console.WriteLine();
+                Console.WriteLine($"Exception StackTrace:{ex.StackTrace}");
+            }
+
+        }
     }
+       
+    
 }
