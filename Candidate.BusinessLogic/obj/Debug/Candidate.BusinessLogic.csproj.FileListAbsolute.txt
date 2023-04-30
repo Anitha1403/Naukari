@@ -6,4 +6,3 @@ D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\obj\Debug\
 D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\obj\Debug\Candidate.BusinessLogic.csproj.CopyComplete
 D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\obj\Debug\Candidate.BusinessLogic.dll
 D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\obj\Debug\Candidate.BusinessLogic.pdb
-D:\Real time Projects\NaukariPortal\Candidate\Candidate.BusinessLogic\obj\Debug\Candidate.BusinessLogic.csproj.AssemblyReference.cache
