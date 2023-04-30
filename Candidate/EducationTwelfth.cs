@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Candidate
+﻿namespace Candidate
 {
     /// <summary>
     /// Class that holds Candidate Twelfth Education Details
     /// </summary>
     public class EducationTwelfth
     {
-        public string EducationTwo { get; set; }
-        public string TwelthBoard { get; set; }
-        public string TwelthYearPassing { get; set; }
-        public string TwelthSchoolMedium { get; set; }
-        public double TwelthTotalMarks { get; set; }
-        public int TwelthEnglishMarks { get; set; }
-        public int TwelthMathMarks { get; set; }
+        public string CollegeName { get; set; }
+        public string TwelfthBoard { get; set; }
+        public string TwelfthYearPassing { get; set; }
+        public string TwelfthSchoolMedium { get; set; }
+        public double TwelfthTotalMarks { get; set; }
+        public int TwelfthEnglishMarks { get; set; }
+        public int TwelfthMathMarks { get; set; }
     }
 }

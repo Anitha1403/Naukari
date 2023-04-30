@@ -1,13 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
+    /// <summary>
+    /// Class holds services of Presentation Details
+    /// </summary>
     public class PresentationDetailsService
     {
+        /// <summary>
+        ///  Method that reads Candidate Presentation details from console screen
+        /// </summary>
+        /// <returns></returns>
         public PresentationDetails ReadPresentationDetails()
         {
             PresentationDetails presentationDetails = new PresentationDetails();
@@ -48,7 +52,6 @@ namespace Candidate.BusinessLogic
                 {
                     Console.WriteLine("\n\nValidation Errors:{0}", validations);
                 }
-
             }
             catch (Exception ex)
             {
@@ -58,7 +61,10 @@ namespace Candidate.BusinessLogic
             }
             return presentationDetails;
         }
-
+        /// <summary>
+        ///  Method that prints Candidate Presentation details to console screen
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintPresentationDetails(PresentationDetails details)
         {
             try

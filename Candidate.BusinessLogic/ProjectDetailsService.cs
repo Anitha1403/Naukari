@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
-    //Class holds that read and print details of Candidate Project details 
+    /// <summary>
+    /// Class holds that services of Project details
+    /// </summary>
     public class ProjectDetailsService
     {
-        //Read Project details
+       /// <summary>
+       /// Method that Reads Candidate Project details from console screen
+       /// </summary>
+       /// <returns></returns>
         public ProjectDetails ReadProjectDetails()
         {
             ProjectDetails projectDetails = new ProjectDetails();
@@ -131,7 +134,7 @@ namespace Candidate.BusinessLogic
                     if (projectDescription.Length >= 20)
                         projectDetails.ProjectDescription = projectDescription;
                     else
-                        validations.Append("Enter Project Description (minimum 20 characters).\n");
+                        validations.Append("Provide Project Description(minimum 20 characters).\n");
                 else
                     validations.Append("Candidate Project Description is missing.\n");
 
@@ -142,7 +145,6 @@ namespace Candidate.BusinessLogic
                     projectDetails.ProjectLocation = projectLocation;
                 else
                     validations.Append("Candidate location is missing.\n");
-
 
                 //Project site
                 Console.WriteLine("\nDifferent values for Project site:");
@@ -217,13 +219,15 @@ namespace Candidate.BusinessLogic
                 }
 
                 //team size
-                Console.Write("Enter Team Size:");
-                string strTeamSize = Console.ReadLine();
+                Console.Write("Enter Team Size:"); 
+                string strTeamSize = Console.ReadLine();                
+                
                 if (!string.IsNullOrEmpty(strTeamSize))
                 {
                     if (rgx.IsMatch(strTeamSize))
                     {
                         string teamSizeValue = strTeamSize;
+
                     }
                     else if (Regex.IsMatch(strTeamSize, @"^\d+$"))
                     {
@@ -232,7 +236,7 @@ namespace Candidate.BusinessLogic
                     }
                     else
                     {
-                        validations.Append("Provide integer value(ex.3).\n");
+                        validations.Append("Provide integer value for team size.(ex.3).\n");
                     }
                 }
                 else
@@ -326,7 +330,10 @@ namespace Candidate.BusinessLogic
             }
             return projectDetails;
         }
-        //Print Project details
+        /// <summary>
+        /// Method that Prints Candidate Project details to console screen
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintProjectDetails(ProjectDetails details)
         {
             try

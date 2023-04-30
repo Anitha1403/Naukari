@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Candidate
+﻿namespace Candidate
 {
     /// <summary>
     /// Class that holds Candidate PG Education Details
@@ -17,7 +11,7 @@ namespace Candidate
         public string PGSpecialization { get; set; }
         public string PGCourseType { get; set; }
         public string PGCourseStartingYear { get; set; }
-        public string PGCourseCourseEndingYear { get; set; }
+        public string PGCourseEndingYear { get; set; }
         public string PGGradingSystem { get; set; }
     }
 }

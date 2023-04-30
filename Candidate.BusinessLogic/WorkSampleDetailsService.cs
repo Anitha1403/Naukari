@@ -1,21 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
+    /// <summary>
+    /// Class holds services of worksample details
+    /// </summary>
     public class WorkSampleDetailsService
     {
+        /// <summary>
+        /// Method that Reads Candidate Work sample details from console screen
+        /// </summary>
+        /// <returns></returns>
         public WorkSampleDetails ReadWorkSampleDetails()
         {
             WorkSampleDetails workSampleDetails = new WorkSampleDetails();
             StringBuilder validations = new StringBuilder();
             try
             {
-                //Work Title
-                           
+                //Work Title                           
                 Console.Write($"Enter Work sample title:");
                 string workitle = Console.ReadLine();
                 if (!string.IsNullOrEmpty(workitle))
@@ -105,7 +108,10 @@ namespace Candidate.BusinessLogic
             }
             return workSampleDetails;
         }
-
+        /// <summary>
+        ///  Method that Prints Candidate Work sample details to console screen
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintWorkSampleDetails(WorkSampleDetails details)
         {
             try

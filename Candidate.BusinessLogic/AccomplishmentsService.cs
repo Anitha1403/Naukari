@@ -1,19 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
+    /// <summary>
+    /// class holds services of Accompishments
+    /// </summary>
     public class AccomplishmentsService
     {
+        /// <summary>
+        /// Method that Reads Candidate Accomplishments details from console screen
+        /// </summary>
+        /// <returns></returns>
         public Accomplishments ReadAccomplishments()
         {
             Accomplishments accomplishments = new Accomplishments();
             try
             {
-
                 OnlineProfileDetailsService onlineProfileDetailsService = new OnlineProfileDetailsService();
                 accomplishments.OnlineProfileDetails = onlineProfileDetailsService.ReadOnlineProfileDetails();
 
@@ -32,9 +34,6 @@ namespace Candidate.BusinessLogic
 
                 CertificationDetailsService certificationDetailsService = new CertificationDetailsService();
                 accomplishments.CertificationDetails = certificationDetailsService.ReadCertificationDetails();
-
-
-
             }
             catch (Exception ex)
             {
@@ -43,8 +42,11 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine($"Exception StackTrace:{ex.StackTrace}");
             }
             return accomplishments;
-
         }
+        /// <summary>
+        ///Method that Prints Candidate Accomplishments details to console screen 
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintAccomplishments(Accomplishments details)
         {
             try 
@@ -67,8 +69,6 @@ namespace Candidate.BusinessLogic
 
                 CertificationDetailsService certificationDetailsService = new CertificationDetailsService();
                 certificationDetailsService.PrintCerificationDetails(details.CertificationDetails);
-
-
             }
             catch (Exception ex)
             {
@@ -76,9 +76,6 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine();
                 Console.WriteLine($"Exception StackTrace:{ex.StackTrace}");
             }
-
         }
-    }
-       
-    
+    }  
 }

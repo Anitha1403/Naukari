@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
+    /// <summary>
+    /// Class holds services of Patent details
+    /// </summary>
     public class PatentDetailsService
     {
-       
+         
         public PatentDetails ReadPatentDetails()
         {
             PatentDetails patentDetails = new PatentDetails();
@@ -107,9 +108,7 @@ namespace Candidate.BusinessLogic
                     else
                         validations.Append($"Enter Presentation description (minimum 20 characters).\n");
                 else
-                    validations.Append($"Candidate Presentation description is missing.\n");              
-
-
+                    validations.Append($"Candidate Presentation description is missing.\n");  
 
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
@@ -126,7 +125,10 @@ namespace Candidate.BusinessLogic
             }
             return patentDetails;
         }
-
+        /// <summary>
+        /// Method that Prints Candidate Patent details to console screen
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintPatentDetails(PatentDetails details)
         {
             try
@@ -150,6 +152,5 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine($"Exception StackTrace:{ex.StackTrace}");
             }
         }
-
     }
 }

@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
+    /// <summary>
+    /// Class holds services of Document details
+    /// </summary>
     public class DocumentDetailsService
     {
-        //Read Candidate Document Details
+        /// <summary>
+        /// Method that Reads Candidate Document details from console screen
+        /// </summary>
+        /// <returns></returns>
         public DocumentDetails ReadDocumentDetails()
         {
             DocumentDetails documentDetails = new DocumentDetails();
@@ -32,7 +38,6 @@ namespace Candidate.BusinessLogic
                     documentDetails.PANNumber = panNumber;
                 else
                     validations.Append("Candidate PAN Number is missing.\n");
-
 
                 //Candidate Driving Licence
                 Console.Write("Enter Driving Licence Number:");
@@ -58,12 +63,10 @@ namespace Candidate.BusinessLogic
                 else
                     validations.Append("Candidate Passport Number is missing.\n");
 
-
-
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
-                    Console.WriteLine("\n\nValidation Errors:{0}", validations);
+                    Console.WriteLine("\n\nValidation Errors:\n{0}", validations);
                 }
             }
             catch (Exception ex)
@@ -74,9 +77,10 @@ namespace Candidate.BusinessLogic
             }
             return documentDetails;
         }
-
-
-        //Print Candidate document Details
+        /// <summary>
+        /// Method that Prints Candidate Document details to console screen
+        /// </summary>
+        /// <param name="Details"></param>
         public void PrintContactDetails(DocumentDetails Details)
         {
             try

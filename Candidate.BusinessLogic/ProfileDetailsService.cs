@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
-    //Class holds that Candidate profie details
+    /// <summary>
+    /// Class holds that service of  Profile details
+    /// </summary>
     public class ProfileDetailsService
     {
-        //Read candidate Profile details
+        /// <summary>
+        ///  Method that reads Candidate Profile details from console screen
+        /// </summary>
+        /// <returns></returns>       
         public ProfileDetails ReadProfileDetails()
         {
             ProfileDetails profieDetails = new ProfileDetails();
@@ -42,8 +44,7 @@ namespace Candidate.BusinessLogic
                     Console.WriteLine("\nError Validations:\n");
 
                    Console.WriteLine($"Error Validations:{validations}");
-                }
-                                
+                }                                
             }
             catch (Exception ex)
             {
@@ -54,7 +55,10 @@ namespace Candidate.BusinessLogic
             return profieDetails;
         }
 
-        //Print Candidate Profile Details
+        /// <summary>
+        ///  Method that Prints Candidate Profile details to console screen
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintProfileDetails(ProfileDetails details)
         {
             try

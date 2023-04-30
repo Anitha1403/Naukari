@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
-    //The class holds that Candidate Address Details service
+    /// <summary>
+    /// Class holds services of Address details
+    /// </summary>
     public class AddressDetailsService
     {
-        //Read Candidate Address Details
+        /// <summary>
+        /// Method that Reads Candidate Address details from console screen
+        /// </summary>
+        /// <returns></returns>
         public AddressDetails ReadAddressDetails()
         {
             AddressDetails addressDetails = new AddressDetails();
@@ -45,16 +48,11 @@ namespace Candidate.BusinessLogic
                         default:
                             validations.Append("Unknown Value for AddressType is selected.\n");
                             break;
-
                     }
                     addressDetails.AddressType = addressTypeValue;
                 }
                 else
-                {
-
-                    validations.Append("Please select integer value for addressType(Ex.2 for Current address).\n");
-                }
-
+                    validations.Append("Please select integer value for addressType(Ex.2 for Current address).\n");              
                 //Read BuildingNumber
                 Console.Write("Enter Building Number:");
                 string buildingNumber=Console.ReadLine();
@@ -112,8 +110,6 @@ namespace Candidate.BusinessLogic
                 else
                     validations.Append("PostalCode value is missing.\n");
 
-
-
                 //Error Validations
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
@@ -129,11 +125,12 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine($"Exception StackTrace:{ex.StackTrace}");
             }
 
-
             return addressDetails;
         }
-
-        //Print Candidate Address Details
+        /// <summary>
+        /// Method that Prints Candidate Address details to console screen
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintAddressDetails(AddressDetails details)
         {
             try
@@ -157,9 +154,6 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine();
                 Console.WriteLine($"Exception StackTrace:{ex.StackTrace}");
             }
-
         }
     }
-
-
 }

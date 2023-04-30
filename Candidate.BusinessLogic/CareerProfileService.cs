@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
-    //Class holds that  read and print deatils of  Candidate Career profile services 
+    /// <summary>
+    /// Class holds services of Career profile details
+    /// </summary>
     public class CareerProfileService
     {
-
-        //Read Career profile details
+        /// <summary>
+        /// Method that Reads Candidate Career profile details from console screen
+        /// </summary>
+        /// <returns></returns>
         public CareerProfile ReadCareerProfileDetails()
         {
             CareerProfile careerProfile = new CareerProfile();
@@ -20,6 +22,8 @@ namespace Candidate.BusinessLogic
 
             try
             {
+                Console.WriteLine("Candidate Career Profile details");
+                Console.WriteLine("________________________________");
                 //Current Industry   
                 Console.WriteLine("\nDifferent values for Current industry:");
                 List<string> currentIndustryList = new List<string>();
@@ -262,9 +266,7 @@ namespace Candidate.BusinessLogic
                 else
                 {
                     validations.Append("Please select integer value for Preffered Location(Ex.1 for Bangaore)\n");
-                }
-
-                
+                }                
 
                 //Job Role  
                 Console.WriteLine("\nDifferent values for Job role:");
@@ -338,7 +340,7 @@ namespace Candidate.BusinessLogic
                 else
                 {
                     validations.Append("Expected Salary is missing.\n");
-                }            
+                }           
 
                 //Error validations
                 if (!string.IsNullOrEmpty(validations.ToString()))
@@ -354,7 +356,10 @@ namespace Candidate.BusinessLogic
             }
             return careerProfile;
         }
-        //Print Candidate Career profile details
+        /// <summary>
+        /// Method that Prints Candidate Career profile details to console screen
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintCareerProfileDetails(CareerProfile details)
         {
             try
@@ -369,8 +374,7 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine("Preffered shift:{0}",details.PreferredShift);
                 Console.WriteLine("Preffered work location:{0}",details.PreferredWorklocation);
                 Console.WriteLine("Job role:{0}", details.JobRole);
-                Console.WriteLine("Expected salary:{0}",details.ExpectedSalary);
-               
+                Console.WriteLine("Expected salary:{0}",details.ExpectedSalary);              
 
             }
             catch (Exception ex)
@@ -379,7 +383,6 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine();
                 Console.WriteLine($"StackTrace Exception:{ex.StackTrace}");
             }
-
         }
     }
 }

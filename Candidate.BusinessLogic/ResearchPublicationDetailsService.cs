@@ -1,20 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
+    /// <summary>
+    /// Class holds services of research publication details
+    /// </summary>
     public class ResearchPublicationDetailsService
     {
+        /// <summary>
+        /// Method that Reads Candidate Research Publication details from console screen
+        /// </summary>
+        /// <returns></returns>
         public ResearchPublicationDetails ReadResearchPublicationDetails()
         {
             ResearchPublicationDetails researchPublicationDetails = new ResearchPublicationDetails();
             StringBuilder validations = new StringBuilder();
             try
             {
-
                 //ResearchTitle
                 Console.Write($"Enter Research Publication title:");
                 string researchPublicationTitle = Console.ReadLine();
@@ -30,7 +33,6 @@ namespace Candidate.BusinessLogic
                     researchPublicationDetails.ResearchURL = researchPublicationURL;
                 else
                     validations.Append($"Candidate Research publication URL is missing.\n");
-
                 
                 //ResearchPublicationYear
                 Console.Write($"Enter Research publicaion year:");
@@ -39,7 +41,6 @@ namespace Candidate.BusinessLogic
                     researchPublicationDetails.ResearchPublicationYear = researchPublicationYear;
                 else
                     validations.Append($"Candidate ResearchPublication year is missing.\n");
-
               
                 //ResearchPublicationMonth
                 Console.Write($"Enter ResearchPublication month:");
@@ -66,7 +67,6 @@ namespace Candidate.BusinessLogic
                 {
                     Console.WriteLine("\n\nValidation Errors:{0}", validations);
                 }
-
             }
             catch (Exception ex)
             {
@@ -76,7 +76,10 @@ namespace Candidate.BusinessLogic
             }
             return researchPublicationDetails;
         }
-
+        /// <summary>
+        /// Method that Prints Candidate Research Publication details to console screen
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintResearchPublicationDetails(ResearchPublicationDetails details)
         {
             try
@@ -89,8 +92,6 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine($"Research Pubication Year:{details.ResearchPublicationYear}");
                 Console.WriteLine($"Research Pubication Month:{details.ResearchPublicationMonth}");
                 Console.WriteLine($"Description:{details.ResearchDescription}");
-
-
             }
             catch (Exception ex)
             {

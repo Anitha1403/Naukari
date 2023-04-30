@@ -1,13 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
+    /// <summary>
+    /// Class holds services of Certificaion details
+    /// </summary>
     public class CertificationDetailsService
     {
+        /// <summary>
+        /// Method that Reads Candidate Certification details from console screen
+        /// </summary>
+        /// <returns></returns>
         public CertificationDetails ReadCertificationDetails()
         {
             CertificationDetails certificationDetails = new CertificationDetails();
@@ -23,7 +27,6 @@ namespace Candidate.BusinessLogic
                 else
                     validations.Append($"Certificaion name is missing.\n");
 
-
                 //CertificationCompletionID
                 Console.Write($"Enter Certification competion ID:");
                 string completionID = Console.ReadLine();
@@ -32,7 +35,6 @@ namespace Candidate.BusinessLogic
                 else
                     validations.Append($"Certification competion ID is missing.\n");
 
-
                 //CertificationURL
                 Console.Write($"Enter certification URL:");
                 string certificationURL = Console.ReadLine();
@@ -40,7 +42,6 @@ namespace Candidate.BusinessLogic
                     certificationDetails.CertificationURL = certificationURL;
                 else
                     validations.Append($"Certification URL is missing.\n");
-
                
                 //CertificationValidityFromYear
                 Console.Write($"Enter Certification validity from year:");
@@ -57,7 +58,6 @@ namespace Candidate.BusinessLogic
                     certificationDetails.CertificationValidityFromMonth = validityFromMonth;
                 else
                     validations.Append($"Certification validity from month is missing.\n");
-
 
                 //CertificationValidityToYear
                 Console.Write($"Enter Certification validity end year:");
@@ -107,11 +107,14 @@ namespace Candidate.BusinessLogic
             return certificationDetails;
         }
 
+        /// <summary>
+        /// Method that Prints Candidate Certification details to console screen
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintCerificationDetails(CertificationDetails details)
         {
             try
             {
-
                 Console.WriteLine();
                 Console.WriteLine("Candidate Certification Details:");
                 Console.WriteLine("____________________________");

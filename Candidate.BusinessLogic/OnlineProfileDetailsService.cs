@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
+    /// <summary>
+    /// Class holds services of Online profile details
+    /// </summary>
     public class OnlineProfileDetailsService
     {
+        /// <summary>
+        /// Method that Reads Candidate Online profile details from console screen
+        /// </summary>
+        /// <returns></returns>
         public OnlineProfileDetails ReadOnlineProfileDetails()
         {
             OnlineProfileDetails onlineProfileDetails = new OnlineProfileDetails();
@@ -66,7 +71,6 @@ namespace Candidate.BusinessLogic
                 else
                     validations.Append($"Candidate social profile Description is missing.\n");
 
-
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
@@ -82,6 +86,10 @@ namespace Candidate.BusinessLogic
             return onlineProfileDetails;
         }
 
+        /// <summary>
+        /// Method that Prints Candidate Online profile details to console screen
+        /// </summary>
+        /// <param name="details"></param>
         public void PrintOnlineProfileDetails(OnlineProfileDetails details)
         {
             try
@@ -99,7 +107,6 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine();
                 Console.WriteLine($"Exception StackTrace:{ex.StackTrace}");
             }
-
         }
     }
 }

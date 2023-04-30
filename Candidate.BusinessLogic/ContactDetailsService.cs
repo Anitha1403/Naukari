@@ -1,14 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Candidate.BusinessLogic
 {
+    /// <summary>
+    /// Class holds services of Contact details
+    /// </summary>
     public class ContactDetailsService
     {
-        //Read Candidate Contact Details
+        /// <summary>
+        /// Method that Reads Candidate Contact details from console screen
+        /// </summary>
+        /// <returns></returns>
         public ContactDetails ReadContactDetails()
         {
             ContactDetails contactDetails = new ContactDetails();
@@ -49,8 +52,6 @@ namespace Candidate.BusinessLogic
                 else
                     validations.Append("Candidate Secondary Email address is missing.\n");
 
-
-
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
@@ -65,9 +66,10 @@ namespace Candidate.BusinessLogic
             }
             return contactDetails;
         }
-
-
-        //Print Candidate Contact Details
+        /// <summary>
+        /// Method that Prints Candidate Contact details to console screen
+        /// </summary>
+        /// <param name="Details"></param>
         public void PrintContactDetails(ContactDetails Details)
         {
             try
@@ -86,8 +88,6 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine();
                 Console.WriteLine("Exception Stack Trace: {0}", ex.StackTrace);
             }
-
         }
-
     }
 }

@@ -167,5 +167,123 @@ namespace Candidate.BusinessLogic.Constants
         public const string CERTIFICATION_EXPIRES = "Yes";
         public const string CERTIFICATION_NOT_EXPIRES = "No";
 
+        //Languages
+        //Proficiency
+        public const string BEGINNER = "Beginner";
+        public const string PROFICIENT = "Proficient";
+        public const string EXPERT = "Expert";
+
+        //Read
+        public const string ABLED_READ = "Yes";
+        public const string NOT_ABLED_READ = "No";
+
+        // write
+        public const string ABLED_WRITE = "Yes";
+        public const string NOT_ABLED_WRITE = "No";
+
+        //Speak
+        public const string ABLED_SPEAK = "Yes";
+        public const string NOT_ABLED_SPEAK = "No";
+
+        //Education details
+        //SSC education details
+        //SSC type 
+        public const string SSC_ANDHRA_PRADESH = "AndhraPradesh";
+        public const string SSC_KARNATAKA = "Karnataka";
+        public const string SSC_TELENGANA = "Telengana";
+        public const string SSC_TAMILANADU = "Tamilanadu";
+
+        //SSC Medium
+        public const string SSC_TELUGU = "Telugu";
+        public const string SSC_ENGLISH = "English";
+        public const string SSC_SANSKRIT = "Sanskrit";
+        public const string SSC_TAMIL = "Tamil";
+
+        //Twelfth education details
+        //Twelfth type 
+        public const string TWELFTH_ANDHRA_PRADESH = "AndhraPradesh";
+        public const string TWELFTH_KARNATAKA = "Karnataka";
+        public const string TWELFTH_TELENGANA = "Telengana";
+        public const string TWELFTH_TAMILANADU = "Tamilanadu";
+
+        //Twelfth Medium
+        public const string TWELFTH_TELUGU = "Telugu";
+        public const string TWELFTH_ENGLISH = "English";
+        public const string TWELFTH_SANSKRIT = "Sanskrit";
+        public const string TWELFTH_KANNADA = "Kannada";
+        public const string TWELFTH_TAMIL = "Tamil";
+
+        //Graduation details
+        //Graduation course
+        public const string GRADUATION_BSC = "B.SC";
+        public const string GRADUATION_BCOM = "B.COM";
+        public const string GRADUATION_BA = "BA";
+        public const string GRADUATION_BTECH = "Btech";
+
+        //Graduation stream
+        public const string GRADUATION_COMPUTERS = "Computers";
+        public const string GRADUATION_CIVIL = "Civil";
+        public const string GRADUATION_CHEMICAL = "Chemical";
+        public const string GRADUATION_COMMUNICATION = "Communication";
+
+        //Course type
+        public const string GRADUATION_FULLTIME = "Full time";
+        public const string GRADUATION_PARTTIME = "Part Time";
+        public const string GRADUATION_DISTANCE = "Distance";
+
+        //Grading system
+        public const string SCALE10_GRADUATION_GRADING_SYSTEM = "Scale 10 Graduation system";
+        public const string SCALE4_GRADUATION_GRADING_SYSTEM = "Scale 4 Graduation system";
+        public const string PASS_GRADUATION_GRADING_SYSTEM = "Course Requires a Pass";
+
+        //primary education
+        public const string PRIMARY_GRADUATION = "Yes";
+        public const string NOT_PRIMARY_GRADUATION = "No";
+
+        //Post graduation details
+        //Post Graduation (PG) course
+        public const string PG_MBA = "MBA";
+        public const string PG_MCOM = "M.COM";
+        public const string PG_MCA = "MCA";
+        public const string PG_MTECH = "M.Tech";
+
+        //PG stream
+        public const string PG_COMPUTERS = "Computers";
+        public const string PG_FINANCE = "Finance";
+        public const string PG_CHEMICAL = "Chemical";
+        public const string PG_ELECTRICAL = "Electrical";
+
+        //Course type
+        public const string PG_FULLTIME = "Full time";
+        public const string PG_PARTTIME = "Part Time";
+        public const string PG_DISTANCE = "Distance";
+
+        //Grading system
+        public const string SCALE10_PG_GRADING_SYSTEM = "Scale 10 Graduation system";
+        public const string SCALE4_PG_GRADING_SYSTEM = "Scale 4 Graduation system";
+        public const string PASS_PG_GRADING_SYSTEM = "Course Requires a Pass";
+
+        //doctorate education details
+        //Doctorate course
+        public const string DOCTORATE_PHD = "Phd";
+        public const string DOCTORATE_MPHILL = "Mphill";
+
+        //Doctorate stream
+        public const string DOCTORATE_COMPUTERS = "Computers";
+        public const string DOCTORATE_FINANCE = "Finance";
+        public const string DOCTORATE_CHEMICAL = "Chemical";
+        public const string DOCTORATE_ELECTRICAL = "Electrical";
+        public const string DOCTORATE_MARKETING = "Marketing";
+
+        //Course type
+        public const string DOCTORATE_FULLTIME = "Full time";
+        public const string DOCTORATE_PARTTIME = "Part Time";
+        public const string DOCTORATE_DISTANCE = "Distance";
+
+        //Grading system
+        public const string SCALE10_DOCTORATE_GRADING_SYSTEM = "Scale 10 Graduation system";
+        public const string SCALE4_DOCTORATE_GRADING_SYSTEM = "Scale 4 Graduation system";
+        public const string PASS_DOCTORATE_GRADING_SYSTEM = "Course Requires a Pass";
+
     }
 }
