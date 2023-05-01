@@ -22,8 +22,8 @@ namespace Candidate.BusinessLogic
 
             try
             {
-                Console.WriteLine();
-                Console.WriteLine("Provide Project Details:\n");
+                Console.WriteLine("\nProvide Project Details:");
+                Console.WriteLine("_________________________\n");
 
                 //Project title
                 Console.Write("Enter Project title:");
@@ -219,26 +219,25 @@ namespace Candidate.BusinessLogic
                 }
 
                 //team size
-                Console.Write("Enter Team Size:"); 
-                string strTeamSize = Console.ReadLine();                
-                
+                Console.Write("Enter Team Size:");
+                string strTeamSize = Console.ReadLine();
+
                 if (!string.IsNullOrEmpty(strTeamSize))
                 {
-                    if (rgx.IsMatch(strTeamSize))
+                    int sizeValue = 0;
+                    bool isSizeHasValue = int.TryParse(strTeamSize, out sizeValue);
+                    if (isSizeHasValue)
                     {
-                        string teamSizeValue = strTeamSize;
-
-                    }
-                    else if (Regex.IsMatch(strTeamSize, @"^\d+$"))
-                    {
-                        int teamSize = int.Parse(strTeamSize);
-                        projectDetails.TeamSize = teamSize;
+                        if (sizeValue > 0)
+                            projectDetails.TeamSize = sizeValue;
                     }
                     else
                     {
-                        validations.Append("Provide integer value for team size.(ex.3).\n");
+                        validations.Append("please enter integer value for team size (ex.12).");
+
                     }
-                }
+                }              
+
                 else
                 {
                     validations.Append("Project team size value is missing.\n");
@@ -317,11 +316,11 @@ namespace Candidate.BusinessLogic
                 //Error validations
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
-                    Console.WriteLine("\n");
-                    Console.WriteLine($"Error validations:\n{validations}");
+                    Console.WriteLine($"\n\nError validations:\n{validations}");
 
                 }
             }
+
             catch (Exception ex)
             {
                 Console.WriteLine($"Exception errors:{ex.Message}");

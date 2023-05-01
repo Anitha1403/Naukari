@@ -19,7 +19,8 @@ namespace Candidate.BusinessLogic
             try
             {
                 //Candidate Profile details
-                Console.WriteLine("Provide Candidate Profile Summary Details:\n");
+                Console.WriteLine("\nProvide Candidate Profile Summary Details:");
+                Console.WriteLine("_________________________\n");
                 //Profile summary
                 Console.Write("Enter Profile summary (minimum 15 characters):");
                 string profileSummary = Console.ReadLine();
@@ -40,10 +41,8 @@ namespace Candidate.BusinessLogic
 
                 //Error Validations
                 if (!string.IsNullOrEmpty(validations.ToString()))
-                {
-                    Console.WriteLine("\nError Validations:\n");
-
-                   Console.WriteLine($"Error Validations:{validations}");
+                {                   
+                   Console.WriteLine($"\n\nError Validations:\n{validations}");
                 }                                
             }
             catch (Exception ex)
@@ -64,7 +63,7 @@ namespace Candidate.BusinessLogic
             try
             {
                 Console.WriteLine();
-                Console.WriteLine("Candidate Profile Details:\n");
+                Console.WriteLine("Candidate Profile Details:");
                 Console.WriteLine("__________________________\n");
                 Console.WriteLine($"Profile summary:{details.ProfileSummary}");
                 Console.WriteLine($"Reasume HeadLine:{details.ResumeHeadline}");

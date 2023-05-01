@@ -19,7 +19,8 @@ namespace Candidate.BusinessLogic
             try
             {
                 // Candidate Contact Details
-                Console.WriteLine("Provide Candidate Contact Details:\n\n");
+                Console.WriteLine("\nProvide Candidate Contact Details:");
+                Console.WriteLine("_________________________\n");
                 //Candidate Primary Phone Number
                 Console.Write("Enter Primary Phone Number:");
                 string primaryPhoneNumber = Console.ReadLine();
@@ -55,7 +56,7 @@ namespace Candidate.BusinessLogic
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
-                    Console.WriteLine("\n\nValidation Errors:{0}", validations);
+                    Console.WriteLine("\nValidation Errors:\n{0}", validations);
                 }
             }
             catch (Exception ex)
@@ -73,10 +74,9 @@ namespace Candidate.BusinessLogic
         public void PrintContactDetails(ContactDetails Details)
         {
             try
-            {
-                Console.WriteLine();
-                Console.WriteLine("Candidate Contact Details:");
-                Console.WriteLine("____________________________");
+            {               
+                Console.WriteLine("\nCandidate Contact Details:");
+                Console.WriteLine("______________________________\n");
                 Console.WriteLine($"Primary Phone Number:{Details.PrimaryPhoneNumber}");
                 Console.WriteLine($"Secondary Phone Number:{Details.SecondaryPhoneNumber}");
                 Console.WriteLine($"Primary Email Address:{Details.PrimaryEmailAddress}");

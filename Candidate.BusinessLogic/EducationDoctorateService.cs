@@ -20,16 +20,16 @@ namespace Candidate.BusinessLogic
             try
             {
                 Console.WriteLine("\nCandidate Doctorate Details.");
-                Console.WriteLine("_______________________________");
+                Console.WriteLine("_______________________________\n");
                 //Doctorate institute name
-                Console.Write("\nEnter Doctorate Institute name:");
+                Console.Write("Enter Doctorate Institute name:");
                 string doctorateInstitue = Console.ReadLine();
                 if (!string.IsNullOrEmpty(doctorateInstitue))
                     educationDoctorateDetails.DoctorateInstitue = doctorateInstitue;
                 else
                     validations.Append("Doctorate Institute value is missing.\n");
                 // Doctorate Course
-                Console.WriteLine("\nDifferent values for Doctorate Course:");
+                Console.WriteLine("Different values for Doctorate Course:");
                 List<string> doctorateCourseList = new List<string>();
                 doctorateCourseList.Add(Constants.Constants.DOCTORATE_PHD);
                 doctorateCourseList.Add(Constants.Constants.DOCTORATE_MPHILL);
@@ -65,7 +65,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("Doctorate Course value is missing.\n");
 
                 //pgSpecialization
-                Console.WriteLine("\nDifferent values for PG Specialization:");
+                Console.WriteLine("Different values for PG Specialization:");
                 List<string> doctorateSpecializationList = new List<string>();
                 doctorateSpecializationList.Add(Constants.Constants.DOCTORATE_COMPUTERS);
                 doctorateSpecializationList.Add(Constants.Constants.DOCTORATE_FINANCE);
@@ -114,7 +114,7 @@ namespace Candidate.BusinessLogic
 
 
                 // Doctorate CourseType             
-                Console.WriteLine("\nDifferent values for Doctorate CourseType:");
+                Console.WriteLine("Different values for Doctorate CourseType:");
                 List<string> doctorateCourseTypeList = new List<string>();
                 doctorateCourseTypeList.Add(Constants.Constants.DOCTORATE_FULLTIME);
                 doctorateCourseTypeList.Add(Constants.Constants.DOCTORATE_PARTTIME);
@@ -155,7 +155,7 @@ namespace Candidate.BusinessLogic
 
 
                 //Doctorate CourseStartingYear
-                Console.Write("\nEnter Doctorate Course Starting Year:");
+                Console.Write("Enter Doctorate Course Starting Year:");
                 string doctorateCourseStartingYear = Console.ReadLine();
                 if (!string.IsNullOrEmpty(doctorateCourseStartingYear))
                     educationDoctorateDetails.DoctorateCourseStartingYear = doctorateCourseStartingYear;
@@ -163,7 +163,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("Doctorate Course Starting Year value is missing.\n");
 
                 //Doctorate CourseCourseEndingYear
-                Console.Write("\nEnter Doctorate Course Ending Year:");
+                Console.Write("Enter Doctorate Course Ending Year:");
                 string doctorateCourseEndingYear = Console.ReadLine();
                 if (!string.IsNullOrEmpty(doctorateCourseEndingYear))
                     educationDoctorateDetails.DoctorateCourseEndingYear = doctorateCourseEndingYear;
@@ -171,7 +171,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("Doctorate Course Ending Year value is missing.\n");
 
                 // Doctorate GradingSystem
-                Console.WriteLine("\nDifferent values for Doctorate Grading System Type:");
+                Console.WriteLine("Different values for Doctorate Grading System Type:");
                 List<string> doctorateGradingSystemList = new List<string>();
                 doctorateGradingSystemList.Add(Constants.Constants.SCALE10_DOCTORATE_GRADING_SYSTEM);
                 doctorateGradingSystemList.Add(Constants.Constants.SCALE4_DOCTORATE_GRADING_SYSTEM);
@@ -232,9 +232,8 @@ namespace Candidate.BusinessLogic
         {
             try
             {
-                Console.WriteLine();
-                Console.WriteLine("Candidate Doctorate Education Details:");
-                Console.WriteLine("____________________________");
+                Console.WriteLine("\nCandidate Doctorate Education Details:");
+                Console.WriteLine("___________________________________\n");
                 Console.WriteLine($"Institute Name:{details.DoctorateInstitue}");
                 Console.WriteLine($"Course:{details.DoctorateCourse}"); 
                 Console.WriteLine($"Specialization:{details.DoctorateSpecialization}");      

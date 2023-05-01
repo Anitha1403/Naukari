@@ -20,16 +20,16 @@ namespace Candidate.BusinessLogic
             try
             {
                 Console.WriteLine("\nCandidate graduation Details.");
-                Console.WriteLine("_______________________________");
+                Console.WriteLine("_______________________________\n");
                 //graduation institute name
-                Console.Write("\nEnter graduation Institute name:");
+                Console.Write("Enter graduation Institute name:");
                 string graduationInstitue = Console.ReadLine();
                 if (!string.IsNullOrEmpty(graduationInstitue))
                     educationGraduationDetails.GraduationInstitue = graduationInstitue;
                 else
                     validations.Append("Graduation Institute value is missing.\n");
                 //GraduationCourse
-                Console.WriteLine("\nDifferent values for graduation Course:");
+                Console.WriteLine("Different values for graduation Course:");
                 List<string> graduationCourseList = new List<string>();
                 graduationCourseList.Add(Constants.Constants.GRADUATION_BSC);       
                 graduationCourseList.Add(Constants.Constants.GRADUATION_BCOM);  
@@ -74,7 +74,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("Graduation Course value is missing.\n");
 
                 //graduationSpecialization
-                Console.WriteLine("\nDifferent values for Graduation Specialization:");
+                Console.WriteLine("Different values for Graduation Specialization:");
                 List<string> graduationSpecializationList = new List<string>();
                 graduationSpecializationList.Add(Constants.Constants.GRADUATION_COMPUTERS);
                 graduationSpecializationList.Add(Constants.Constants.GRADUATION_CIVIL);
@@ -118,7 +118,7 @@ namespace Candidate.BusinessLogic
 
 
                 //graduationCourseType
-                Console.WriteLine("\nDifferent values for graduation Course:");
+                Console.WriteLine("Different values for graduation Course:");
                 List<string> graduationCourseTypeList = new List<string>();
                 graduationCourseTypeList.Add(Constants.Constants.GRADUATION_FULLTIME);
                 graduationCourseTypeList.Add(Constants.Constants.GRADUATION_PARTTIME);
@@ -159,15 +159,15 @@ namespace Candidate.BusinessLogic
                     validations.Append("Graduation Course Type value is missing.\n");
 
                 //graduationCourseStartingYear
-                Console.Write("\nEnter graduation Course Starting Year:");
+                Console.Write("Enter graduation Course Starting Year:");
                 string graduationCourseStartingYear = Console.ReadLine();
                 if (!string.IsNullOrEmpty(graduationCourseStartingYear))
                     educationGraduationDetails.GraduationCourseStartingYear = graduationCourseStartingYear;
                 else
-                    validations.Append("graduation Course Starting Year value is missing.\n");
+                    validations.Append("Graduation Course Starting Year value is missing.\n");
 
                 //graduationCourseCourseEndingYear
-                Console.Write("\nEnter graduation Course Ending Year:");
+                Console.Write("Enter graduation Course Ending Year:");
                 string graduationCourseEndingYear = Console.ReadLine();
                 if (!string.IsNullOrEmpty(graduationCourseEndingYear))
                     educationGraduationDetails.GraduationCourseEndingYear = graduationCourseEndingYear;
@@ -175,7 +175,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("Graduation Course Ending Year value is missing.\n");
 
                 //graduationGradingSystem
-                Console.WriteLine("\nDifferent values for graduation Grading System Type:");
+                Console.WriteLine("Different values for graduation Grading System Type:");
                 List<string> graduationGradingSystemList = new List<string>();
                 graduationGradingSystemList.Add(Constants.Constants.SCALE10_GRADUATION_GRADING_SYSTEM);
                 graduationGradingSystemList.Add(Constants.Constants.SCALE4_GRADUATION_GRADING_SYSTEM);
@@ -215,7 +215,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("graduation Grading system Type value is missing.\n");
 
                 //PrimaryGraduation
-                Console.Write("\nisThisPrimaryGraduation?(Enter True/False):");
+                Console.Write("Is this Primary Graduation?(Enter True/False):");
                 string primaryGraduationValue = Console.ReadLine();
                 if (!string.IsNullOrEmpty(primaryGraduationValue))
                 {
@@ -252,9 +252,8 @@ namespace Candidate.BusinessLogic
         {
             try
             {
-                 Console.WriteLine();
-                Console.WriteLine("Candidate Graduation Education Details:");
-                Console.WriteLine("____________________________");
+                Console.WriteLine("\nCandidate Graduation Education Details:");
+                Console.WriteLine("________________________________________\n");
                 Console.WriteLine($"Institute Name:{details.GraduationInstitue}");
                 Console.WriteLine($"Course:{details.GraduationCourse}"); 
                 Console.WriteLine($"Specialization:{details.GraduationSpecialization}");      

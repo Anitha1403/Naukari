@@ -22,10 +22,10 @@ namespace Candidate.BusinessLogic
 
             try
             {
-                Console.WriteLine("Candidate Career Profile details");
-                Console.WriteLine("________________________________");
+                Console.WriteLine("\nCandidate Career Profile details");
+                Console.WriteLine("________________________________\n");
                 //Current Industry   
-                Console.WriteLine("\nDifferent values for Current industry:");
+                Console.WriteLine("Different values for Current industry:");
                 List<string> currentIndustryList = new List<string>();
                 currentIndustryList.Add(Constants.Constants.HARDWARE_NETWORKING);
                 currentIndustryList.Add(Constants.Constants.E_COMMERCE);
@@ -323,29 +323,24 @@ namespace Candidate.BusinessLogic
                 string salary = Console.ReadLine();
                 if (!string.IsNullOrEmpty(salary))
                 {
-                    if (rgx.IsMatch(salary))
+                    double salaryValue = 0;
+                    bool isSalaryHasValue = double.TryParse(salary, out salaryValue);
+                    if (isSalaryHasValue)
                     {
-                        string sal = salary; 
+                        if(salaryValue>0)
+                            careerProfile.ExpectedSalary = salaryValue;
                     }
-                    else if (Regex.IsMatch(salary, @"^-?\d+(?:\.\d+)?$")) 
-                    {
-                        double expectedSalary = double.Parse(salary);
-                        careerProfile.ExpectedSalary = expectedSalary;
-                    }
-                    else
-                    {
-                        validations.Append("Please provide a decimal/integer value for  Expected Salary (ex:4216.34).\n");
-                    }
-                }
-                else
-                {
+                    else                      
+                        validations.Append("Please provide a decimal/integer value for  Expected Salary (ex:4216.34).\n");                     
+                }               
+                else                
                     validations.Append("Expected Salary is missing.\n");
-                }           
+                          
 
                 //Error validations
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
-                    Console.WriteLine($"\nError validations:\n{validations}");
+                    Console.WriteLine($"\n\nError validations:\n{validations}");
                 }
             }
             catch (Exception ex)

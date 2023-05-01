@@ -18,7 +18,8 @@ namespace Candidate.BusinessLogic
             StringBuilder validations = new StringBuilder();
             try
             {
-                Console.WriteLine("Provide Certification Details:\n");
+                Console.WriteLine("\nProvide Certification Details:");
+                Console.WriteLine("_________________________________\n");
                 //CertificationName
                 Console.Write($"Enter Certification name:");
                 string certificationName = Console.ReadLine();
@@ -94,7 +95,7 @@ namespace Candidate.BusinessLogic
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
-                    Console.WriteLine("\n\nValidation Errors:{0}", validations);
+                    Console.WriteLine("\nValidation Errors:\n{0}", validations);
                 }
 
             }

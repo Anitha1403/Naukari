@@ -18,6 +18,9 @@ namespace Candidate.BusinessLogic
             StringBuilder validations = new StringBuilder();
             try
             {
+
+                Console.WriteLine("\nProvide Research Publication Details:");
+                Console.WriteLine("_________________________\n");
                 //ResearchTitle
                 Console.Write($"Enter Research Publication title:");
                 string researchPublicationTitle = Console.ReadLine();
@@ -65,7 +68,7 @@ namespace Candidate.BusinessLogic
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
-                    Console.WriteLine("\n\nValidation Errors:{0}", validations);
+                    Console.WriteLine("\n\nValidation Errors:\n{0}", validations);
                 }
             }
             catch (Exception ex)

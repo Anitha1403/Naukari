@@ -22,16 +22,16 @@ namespace Candidate.BusinessLogic
             try
             {
                 Console.WriteLine("\nCandidate Twelfth Education details");
-                Console.WriteLine("_______________________________");
+                Console.WriteLine("___________________________________\n");
                 //College name
-                Console.Write("\nEnter twelfth college name:");
+                Console.Write("Enter twelfth college name:");
                 string collegeName = Console.ReadLine();
                 if (!string.IsNullOrEmpty(collegeName))
                     educationTwelfthDetails.CollegeName = collegeName;
                 else
                     validations.Append("Twelfth college name value is missing.\n");
                 //Twelfth board
-                Console.WriteLine("\nDifferent values for Twelfth Board:");
+                Console.WriteLine("Different values for Twelfth Board:");
                 List<string> TwelfthBoardList = new List<string>();
                 TwelfthBoardList.Add(Constants.Constants.TWELFTH_ANDHRA_PRADESH);
                 TwelfthBoardList.Add(Constants.Constants.TWELFTH_KARNATAKA);
@@ -75,7 +75,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("twelfth Board value is missing.\n");
 
                 //Twelfth passing year
-                Console.Write("\nEnter Twelfth passing year:");
+                Console.Write("Enter Twelfth passing year:");
                 string twelfthPassingYear = Console.ReadLine();
                 if (!string.IsNullOrEmpty(twelfthPassingYear))
                     educationTwelfthDetails.TwelfthYearPassing = twelfthPassingYear;
@@ -83,7 +83,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("Twelfth year passing value is missing.\n");
 
                 //Twelfth Medium
-                Console.WriteLine("\nDifferent values for Twelfth medium:");
+                Console.WriteLine("Different values for Twelfth medium:");
                 List<string> twelfthMediumList = new List<string>();
                 twelfthMediumList.Add(Constants.Constants.TWELFTH_TELUGU);
                 twelfthMediumList.Add(Constants.Constants.TWELFTH_ENGLISH);
@@ -132,80 +132,63 @@ namespace Candidate.BusinessLogic
                     validations.Append("Twelfth medium value is missing.\n");
 
                 //totalMarks               
-                Console.Write("\nEnter Twelfth total marks:");
+                Console.Write("Enter Twelfth total marks:");
                 string totalMarks = Console.ReadLine();
                 if (!string.IsNullOrEmpty(totalMarks))
                 {
-                    if (rgx.IsMatch(totalMarks))
+                    int twelfthTotalMarks = 0;
+                    bool isTwelfthTotalMarksHasValue = int.TryParse(totalMarks, out twelfthTotalMarks);
+                    if (isTwelfthTotalMarksHasValue)
                     {
-                        string marks = totalMarks;
+                        if (twelfthTotalMarks > 0)
+                            educationTwelfthDetails.TwelfthMathMarks = twelfthTotalMarks;
                     }
-                    else if (Regex.IsMatch(totalMarks, @"^-?\d+(?:\.\d+)?$"))
-                    {
-                        double twelfthTotalMarks = double.Parse(totalMarks);
-                        educationTwelfthDetails.TwelfthTotalMarks = twelfthTotalMarks;
-                    }
-                    else
-                    {
-                        validations.Append("Please provide a decimal/integer value for  twelfth total marks (ex:86.34).\n");
-                    }
+                    else                    
+                        validations.Append("Please provide a decimal/integer value for  twelfth total marks (ex:86.34).\n");                    
                 }
                 else
-                {
                     validations.Append("Twelfth total marks value is missing.\n");
-                }
 
                 // English marks
-                Console.Write("\nEnter Twelfth English marks:");
+                Console.Write("Enter Twelfth English marks:");
                 string strEnglishMarks = Console.ReadLine();
 
                 if (!string.IsNullOrEmpty(strEnglishMarks))
                 {
-                    if (rgx.IsMatch(strEnglishMarks))
+                    int englishMarks = 0;
+                    bool isEnglishMarksHasValue = int.TryParse(strEnglishMarks, out englishMarks);
+                    if (isEnglishMarksHasValue)
                     {
-                        string englishMarksValue = strEnglishMarks;
+                        if (englishMarks > 0)
+                            educationTwelfthDetails.TwelfthMathMarks = englishMarks;
 
                     }
-                    else if (Regex.IsMatch(strEnglishMarks, @"^\d+$"))
-                    {
-                        int englishMarks = int.Parse(strEnglishMarks);
-                        educationTwelfthDetails.TwelfthEnglishMarks = englishMarks;
-                    }
-                    else
-                    {
+                    else                    
                         validations.Append("Provide integer value for Twelfth English marks (ex.3).\n");
-                    }
                 }
                 else
-                {
-                    validations.Append("Twelfth English marks value is missing.\n");
-                }
+                    validations.Append("Twelfth English marks value is missing.\n");                
 
                 // Maths marks
-                Console.Write("\nEnter Twelfth Maths marks:");
+                Console.Write("Enter Twelfth Maths marks:");
                 string strMathsMarks = Console.ReadLine();
 
                 if (!string.IsNullOrEmpty(strMathsMarks))
                 {
-                    if (rgx.IsMatch(strMathsMarks))
+                    int mathsMarks = 0;
+                    bool isMathsMarksHasValue = int.TryParse(strMathsMarks, out mathsMarks);
+                    if (isMathsMarksHasValue)
                     {
-                        string mathsMarksValue = strMathsMarks;
+                        if(mathsMarks>0)
+                            educationTwelfthDetails.TwelfthMathMarks = mathsMarks;
 
-                    }
-                    else if (Regex.IsMatch(strMathsMarks, @"^\d+$"))
-                    {
-                        int mathsMarks = int.Parse(strMathsMarks);
-                        educationTwelfthDetails.TwelfthMathMarks = mathsMarks;
-                    }
-                    else
-                    {
-                        validations.Append("Provide integer value for Twelfth Maths marks (ex.3).\n");
-                    }
+                    }                   
+                    else                    
+                        validations.Append("Provide integer value for Twelfth Maths marks (ex.3).\n"); 
                 }
-                else
-                {
+                else                
                     validations.Append("Twelfth Maths marks value is missing.\n");
-                }
+                
 
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))

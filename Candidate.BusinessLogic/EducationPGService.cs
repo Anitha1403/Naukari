@@ -20,16 +20,16 @@ namespace Candidate.BusinessLogic
             try
             {
                 Console.WriteLine("\nCandidate PG Details.");
-                Console.WriteLine("_______________________________");
+                Console.WriteLine("_______________________________\n");
                 //PG institute name
-                Console.Write("\nEnter PG Institute name:");
+                Console.Write("Enter PG Institute name:");
                 string pgInstitue=Console.ReadLine();
                 if(!string.IsNullOrEmpty(pgInstitue))
                     educationPGDetails.PGInstitue = pgInstitue;
                 else
                     validations.Append("PG Institute value is missing.\n");
                 //pgCourse
-                Console.WriteLine("\nDifferent values for PG Course:");
+                Console.WriteLine("Different values for PG Course:");
                 List<string> pgCourseList = new List<string>();
                 pgCourseList.Add(Constants.Constants.PG_MTECH);
                 pgCourseList.Add(Constants.Constants.PG_MBA);
@@ -73,7 +73,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("PG Course value is missing.\n");
 
                 //pgSpecialization
-                Console.WriteLine("\nDifferent values for PG Specialization:");
+                Console.WriteLine("Different values for PG Specialization:");
                 List<string> pgSpecializationList = new List<string>();
                 pgSpecializationList.Add(Constants.Constants.PG_COMPUTERS);
                 pgSpecializationList.Add(Constants.Constants.PG_FINANCE);
@@ -116,7 +116,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("PG Specialization value is missing.\n");
 
                 //pgCourseType
-                Console.WriteLine("\nDifferent values for PG Course:");
+                Console.WriteLine("Different values for PG Course:");
                 List<string> pgCourseTypeList = new List<string>();
                 pgCourseTypeList.Add(Constants.Constants.PG_FULLTIME);
                 pgCourseTypeList.Add(Constants.Constants.PG_PARTTIME);
@@ -156,7 +156,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("PG Course Type value is missing.\n");
 
                 //pgCourseStartingYear
-                Console.Write("\nEnter PG Course Starting Year:");
+                Console.Write("Enter PG Course Starting Year:");
                 string pgCourseStartingYear = Console.ReadLine();
                 if (!string.IsNullOrEmpty(pgCourseStartingYear))
                     educationPGDetails.PGCourseStartingYear = pgCourseStartingYear;
@@ -165,7 +165,7 @@ namespace Candidate.BusinessLogic
 
 
                 //pgCourseCourseEndingYear
-                Console.Write("\nEnter PG Course Ending Year:");
+                Console.Write("Enter PG Course Ending Year:");
                 string pgCourseEndingYear = Console.ReadLine();
                 if (!string.IsNullOrEmpty(pgCourseEndingYear))
                     educationPGDetails.PGCourseEndingYear = pgCourseEndingYear;
@@ -173,7 +173,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("PG Course Ending Year value is missing.\n");
 
                 //pgGradingSystem
-                Console.WriteLine("\nDifferent values for PG Grading System Type:");
+                Console.WriteLine("Different values for PG Grading System Type:");
                 List<string> pgGradingSystemList = new List<string>();
                 pgGradingSystemList.Add(Constants.Constants.SCALE10_PG_GRADING_SYSTEM);
                 pgGradingSystemList.Add(Constants.Constants.SCALE4_PG_GRADING_SYSTEM);
@@ -233,10 +233,9 @@ namespace Candidate.BusinessLogic
         public void PrintPGEducationDetails(EducationPG details)
         {
             try
-            {
-                Console.WriteLine();
-                Console.WriteLine("Candidate PG Education Details:");
-                Console.WriteLine("____________________________");
+            {               
+                Console.WriteLine("\nCandidate PG Education Details:");
+                Console.WriteLine("__________________________________\n");
                 Console.WriteLine($"Institute Name:{details.PGInstitue}");
                 Console.WriteLine($"Course:{details.PGCourse}");
                 Console.WriteLine($"Specialization:{details.PGSpecialization}");

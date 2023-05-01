@@ -16,8 +16,8 @@ namespace Candidate.BusinessLogic
             StringBuilder validations = new StringBuilder();
             try
             {
-                Console.WriteLine("Provide Online profile Details:\n");
-
+                Console.WriteLine("\nProvide Patent Details:");
+                Console.WriteLine("_________________________\n");
                 //PatentTitle
                 Console.Write($"Enter Patent title:");
                 string patentTitle = Console.ReadLine();
@@ -113,7 +113,7 @@ namespace Candidate.BusinessLogic
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
-                    Console.WriteLine("\n\nValidation Errors:{0}", validations);
+                    Console.WriteLine("\n\nValidation Errors:\n{0}", validations);
                 }
 
             }

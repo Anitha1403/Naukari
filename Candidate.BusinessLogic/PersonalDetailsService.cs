@@ -19,7 +19,8 @@ namespace Candidate.BusinessLogic
             try
             {
                 // Candidate Personal Details
-                Console.WriteLine("Provide Candidate Personal Details:\n\n");
+                Console.WriteLine("Provide Candidate Personal Details:");
+                Console.WriteLine("_________________________\n");
                 //Candidate First Name
                 Console.Write("Enter First Name:");
                 string firstName = Console.ReadLine();
@@ -53,7 +54,7 @@ namespace Candidate.BusinessLogic
                 
                 Utility.Utility.PrintListValues(genderList);
 
-                Console.Write("Select a value for Gender(Ex. Select 1 for Male.):");
+                Console.Write("Select a value for Gender(Ex. Select 1 for Male):");
                 int genderOutput = 0;
                 bool isGenderHasValue=int.TryParse(Console.ReadLine(), out genderOutput);
                 string genderValue=string.Empty;
@@ -93,7 +94,7 @@ namespace Candidate.BusinessLogic
 
                 Utility.Utility.PrintListValues(candidateTypeList);
 
-                Console.Write("Select a value for CandidateType(Ex. Select 1 for Single Parent.):");
+                Console.Write("Select a value for CandidateType(Ex. Select 1 for Single Parent):");
                 int candidateTypeOutput = 0;
                 bool isCandidateTypeHasValue = int.TryParse(Console.ReadLine(), out candidateTypeOutput);
                 string candidateTypeValue = string.Empty;
@@ -139,7 +140,7 @@ namespace Candidate.BusinessLogic
 
                 Utility.Utility.PrintListValues(maritalStatusList);
 
-                Console.Write("Select a value for MaritalStatus(Ex. Select 1 for UnMarried.):");
+                Console.Write("Select a value for MaritalStatus(Ex. Select 1 for UnMarried):");
                 int maritalStatusOutput = 0;
                 bool isMaritalStatusHasValue = int.TryParse(Console.ReadLine(), out maritalStatusOutput);
                 string maritalStatusValue = string.Empty;
@@ -193,7 +194,7 @@ namespace Candidate.BusinessLogic
 
                 Utility.Utility.PrintListValues(categoryList);
 
-                Console.Write("Select a value for Category(Ex. Select 1 for General.):");
+                Console.Write("Select a value for Category(Ex. Select 1 for General):");
                 int categoryOutput = 0;
                 bool isCategoryHasValue = int.TryParse(Console.ReadLine(), out categoryOutput);
                 string categoryValue = string.Empty;
@@ -242,7 +243,7 @@ namespace Candidate.BusinessLogic
                         validations.Append("Provide a value for Differently abled(ex.true for differently abled).\n");
                 }
                 else
-                    validations.Append("Differently abled value is missing.");
+                    validations.Append("Differently abled value is missing.\n");
 
                 //Candidate Career Break
                 Console.Write("\nDo you have any Career Break?(Enter True/False):");
@@ -258,7 +259,7 @@ namespace Candidate.BusinessLogic
                         validations.Append("Provide a value for CareerBreak(ex.true/false).\n");
                 }
                 else
-                validations.Append("Career break value is missing.");
+                validations.Append("Career break value is missing.\n");
 
 
             //Candidate WorkPermitUSA
@@ -274,7 +275,7 @@ namespace Candidate.BusinessLogic
 
                 Utility.Utility.PrintListValues(workPermitUSAList);
 
-                Console.Write("Select a value for workPermitUSAList(Ex. Select 1 for Have US H1 Visa.):");
+                Console.Write("Select a value for workPermitUSAList(Ex. Select 1 for Have US H1 Visa):");
                 int workPermitUSAOutput = 0;
                 bool isWorkPermitUSAHasValue = int.TryParse(Console.ReadLine(), out workPermitUSAOutput);
                 string workPermitUSAValue = string.Empty;
@@ -327,7 +328,7 @@ namespace Candidate.BusinessLogic
               
                 Utility.Utility.PrintListValues(workPermitOtherCountriesList);
 
-                Console.Write("Select a value for workPermitOtherCountriesList(Ex. Select 1 for INDIA.):");
+                Console.Write("Select a value for workPermitOtherCountriesList(Ex. Select 1 for INDIA):");
                 int workPermitOtherCounryOutput = 0;
                 bool isWorkPermitOtherCountryHasValue = int.TryParse(Console.ReadLine(), out workPermitOtherCounryOutput);
                 string workPermitOtherCountryValue = string.Empty;
@@ -373,7 +374,7 @@ namespace Candidate.BusinessLogic
                
                 Utility.Utility.PrintListValues(workStatusList);
 
-                Console.Write("Select a value for workStatusList(Ex. Select 1 for Fresher.):");
+                Console.Write("Select a value for workStatusList(Ex. Select 1 for Fresher):");
                 int workStatusOutput = 0;
                 bool isworkStatusHasValue = int.TryParse(Console.ReadLine(), out workStatusOutput);
                 string workStatusValue = string.Empty;
@@ -410,7 +411,7 @@ namespace Candidate.BusinessLogic
 
                 Utility.Utility.PrintListValues(noticePeriodList);
 
-                Console.Write("Select a value for Notice Period (Ex. Select 2 for one month.):");
+                Console.Write("Select a value for Notice Period (Ex. Select 2 for one month):");
                 int noticePeriodOutput = 0;
                 bool isNoticePeriodOutputHasValue = int.TryParse(Console.ReadLine(), out noticePeriodOutput);
                 string noticePeroidValue = string.Empty;
@@ -449,7 +450,7 @@ namespace Candidate.BusinessLogic
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
-                    Console.WriteLine("\n\nValidation Errors:{0}", validations);
+                    Console.WriteLine("\n\nValidation Errors:\n{0}", validations);
                 }
             }
             catch (Exception ex)

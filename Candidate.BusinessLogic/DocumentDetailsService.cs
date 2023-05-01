@@ -22,7 +22,8 @@ namespace Candidate.BusinessLogic
             try
             {
                 // Candidate Document Details
-                Console.WriteLine("Provide Candidate Document Details:\n\n");
+                Console.WriteLine("\nProvide Candidate Document Details:");
+                Console.WriteLine("_________________________________\n");
                 //Candidate Aadhar Number
                 Console.Write("Enter Aadhar Number:");
                 string aadharNumber = Console.ReadLine();
@@ -48,12 +49,12 @@ namespace Candidate.BusinessLogic
                     validations.Append("Candidate Driving Licence number is missing.\n");
 
                 //Candidate Ovter Card Number
-                Console.Write("Enter Ovter Card Number:");
+                Console.Write("Enter Voter Card Number:");
                 string ovterCardNumber = Console.ReadLine();
                 if (!string.IsNullOrEmpty(ovterCardNumber))
                     documentDetails.OvterCardNumber = ovterCardNumber;
                 else
-                    validations.Append("Candidate Ovter Card Number is missing.\n");
+                    validations.Append("Candidate Voter Card Number is missing.\n");
 
                 //Candidate Passport Number
                 Console.Write("Enter Passport Number:");
@@ -91,7 +92,7 @@ namespace Candidate.BusinessLogic
                 Console.WriteLine($"Aadhar Number:{Details.AadharNumber}");
                 Console.WriteLine($"PAN Number:{Details.PANNumber}");
                 Console.WriteLine($"Driving Licence:{Details.DrivingLicence}");
-                Console.WriteLine($"Ovter Card Number:{Details.OvterCardNumber}");
+                Console.WriteLine($"Voter Card Number:{Details.OvterCardNumber}");
                 Console.WriteLine($"Passport Number:{Details.PassportNumber}");
             }
             catch (Exception ex)

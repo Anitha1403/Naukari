@@ -25,9 +25,11 @@ namespace Candidate.BusinessLogic
                 do
                 {                   
                     if (skillsList.Count == 0)
-                        Console.WriteLine("\nProvide skill:\n");
+                        Console.WriteLine("\nProvide skill:\n__________________");                  
                     else
-                        Console.WriteLine("\nProvide one more Skill:");
+                        Console.WriteLine("\nProvide one more Skill:\n____________________");
+
+
                     Console.Write("Enter Skill name:");                  
                     string skill =Console.ReadLine(); 
                     string skillName = string.Empty;

@@ -19,9 +19,9 @@ namespace Candidate.BusinessLogic
             StringBuilder validations = new StringBuilder();
             try
             {
-                Console.WriteLine("\nProvide Candidate Address Details");
+                Console.WriteLine("\n\nProvide Candidate Address Details");
+                Console.WriteLine("______________________________________");
                 Console.WriteLine();
-                Console.WriteLine("");
                 //Address Type
                 Console.WriteLine("Different Address Types:");
                 List<string> addressTypeList = new List<string>();
@@ -114,7 +114,7 @@ namespace Candidate.BusinessLogic
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
                     Console.Write("\n\n");
-                    Console.WriteLine($"Validation Errors:{validations}");
+                    Console.WriteLine($"Validation Errors:\n{validations}");
                 }
 
             }

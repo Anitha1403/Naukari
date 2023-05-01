@@ -18,14 +18,15 @@ namespace Candidate.BusinessLogic
             StringBuilder validations = new StringBuilder();
             try
             {
-
+                Console.WriteLine("\nProvide Presentation Details:");
+                Console.WriteLine("____________________________\n");
                 //PresentationTitle
-                Console.Write($"Enter Presentation title:");
+                Console.Write("Enter Presentation title:");
                 string presentationTitle = Console.ReadLine();
                 if (!string.IsNullOrEmpty(presentationTitle))
                     presentationDetails.PresentationTitle = presentationTitle;
                 else
-                    validations.Append($"Candidate  Presentation  title is missing.\n");
+                    validations.Append("Candidate  Presentation  title is missing.\n");
 
                 //PresentationURL
                 Console.Write($"Enter URL:");
@@ -33,24 +34,24 @@ namespace Candidate.BusinessLogic
                 if (!string.IsNullOrEmpty(presentationURL))
                     presentationDetails.PresentationURL = presentationURL;
                 else
-                    validations.Append($"Candidate Presentation URL is missing.\n");
+                    validations.Append("Candidate Presentation URL is missing.\n");
                 
                 //PresentationDescription
-                Console.Write($"Enter Presentation  Description (minimum 20 characters):");
+                Console.Write("Enter Presentation  Description (minimum 20 characters):");
                 string presentationDescription = Console.ReadLine();
                 if (!string.IsNullOrEmpty(presentationDescription))
                     if (presentationDescription.Length >= 20)
                         presentationDetails.PresentationDescription = presentationDescription;
                     else
-                        validations.Append($"Enter Presentation description (minimum 20 characters).\n");
+                        validations.Append("Enter Presentation description (minimum 20 characters).\n");
                 else
-                    validations.Append($"Candidate Presentation description is missing.\n");               
+                    validations.Append("Candidate Presentation description is missing.\n");               
 
 
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
                 {
-                    Console.WriteLine("\n\nValidation Errors:{0}", validations);
+                    Console.WriteLine("\n\nValidation Errors:\n{0}", validations);
                 }
             }
             catch (Exception ex)

@@ -22,12 +22,18 @@ namespace Candidate.BusinessLogic
                 bool candidateChoice = false;
                 do
                 {
-                    Language language = new Language();                  
+                    Language language = new Language();
 
                     if (languages.Count == 0)
-                        Console.WriteLine("\nProvide Language Details");
+                    {
+                        Console.WriteLine("\nProvide Language Details:");
+                        Console.WriteLine("_________________________\n");
+                    }
                     else
-                        Console.WriteLine("\nProvide one more Language Details");
+                    {
+                        Console.WriteLine("nProvide one more Language Details:");
+                        Console.WriteLine("_________________________________\n");
+                    }
 
                     //Language name
                     Console.Write("Enter Language Name:");

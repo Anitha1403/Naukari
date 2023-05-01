@@ -22,16 +22,16 @@ namespace Candidate.BusinessLogic
             try
             {
                 Console.WriteLine("\nCandidate Tenth Education details");
-                Console.WriteLine("_______________________________");
+                Console.WriteLine("________________________________\n");
                 //SchoolName
-                Console.Write("\nEnter tenth School name:");
+                Console.Write("Enter tenth School name:");
                 string schoolName = Console.ReadLine();
                 if (!string.IsNullOrEmpty(schoolName))
                     educationSSCDetails.SchoolName = schoolName;
                 else
                     validations.Append("Tenth school name value is missing.\n");
                 //Tenth board
-                Console.WriteLine("\nDifferent values for Tenth Board:");
+                Console.WriteLine("Different values for Tenth Board:");
                 List<string> tenthBoardList = new List<string>();
                 tenthBoardList.Add(Constants.Constants.SSC_ANDHRA_PRADESH);
                 tenthBoardList.Add(Constants.Constants.SSC_KARNATAKA);
@@ -75,7 +75,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("Tenth Board value is missing.\n");
 
                 //Tenth passing year
-                Console.Write("\nEnter tenth passing year:");
+                Console.Write("Enter tenth passing year:");
                 string tenthPassingYear=Console.ReadLine();
                 if (!string.IsNullOrEmpty(tenthPassingYear))
                     educationSSCDetails.TenthYearPassing = tenthPassingYear;
@@ -83,7 +83,7 @@ namespace Candidate.BusinessLogic
                     validations.Append("Tenth year passing value is missing.\n");
 
                 //TenthSchoolMedium
-                Console.WriteLine("\nDifferent values for Tenth school medium:");
+                Console.WriteLine("Different values for Tenth school medium:");
                 List<string> tenthMediumList = new List<string>();
                 tenthMediumList.Add(Constants.Constants.SSC_TELUGU);
                 tenthMediumList.Add(Constants.Constants.SSC_ENGLISH);
@@ -127,28 +127,23 @@ namespace Candidate.BusinessLogic
                     validations.Append("SSC/Tenth school medium value is missing.\n");
 
                 //totalMarks               
-                Console.Write("\nEnter Tenth total marks:");
+                Console.Write("Enter Tenth total marks:");
                 string totalMarks = Console.ReadLine();
                 if (!string.IsNullOrEmpty(totalMarks))
                 {
-                    if (rgx.IsMatch(totalMarks))
+                    double marks = 0;
+                    bool isMarksHasValue=double.TryParse(totalMarks, out marks);
+                    if (isMarksHasValue)
                     {
-                        string marks = totalMarks;
+                        if(marks>0)
+                            educationSSCDetails.TenthTotalMarks= marks;
                     }
-                    else if (Regex.IsMatch(totalMarks, @"^-?\d+(?:\.\d+)?$"))
-                    {
-                        double tenthTotalMarks = double.Parse(totalMarks);
-                        educationSSCDetails.TenthTotalMarks = tenthTotalMarks;
-                    }
-                    else
-                    {
-                        validations.Append("Please provide a decimal/integer value for  Tenth total marks (ex:86.34).\n");
-                    }
+                    else                     
+                        validations.Append("Please provide a decimal/integer value for  Tenth total marks (ex:86.34).\n");                    
                 }
-                else
-                {
+                else                
                     validations.Append("Tenth total marks value is missing.\n");
-                }
+                
 
                 //Validation error messages
                 if (!string.IsNullOrEmpty(validations.ToString()))
